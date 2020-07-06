@@ -1,0 +1,9 @@
+<h1 class="page-header">Home</h1>
+
+<button (click)="showCustomers()">Show Customers</button>
+<br />
+<ul>
+  <li *ngFor="let customer of customers">
+    <a [routerLink]="['/profile/', customer.id]">{{ customer.name }}</a>
+  </li>
+</ul>
